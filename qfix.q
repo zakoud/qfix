@@ -1,6 +1,6 @@
-/ fix parser
+/ q-fix parser
 
-\d .fix
+\d .qfix
 
 / delimiter
 dlm:"\001"
