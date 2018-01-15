@@ -19,7 +19,7 @@ time         sym  price    size
 15:40:20.955 IBM  14.51357 82  
 02:43:08.653 GOOG 6.153794 44  
 17:22:07.598 IBM  32.38869 87  
-q).fix.p t
+q).qfix.p t
 "time=17:40:45.617\001sym=IBM\001price=49.29141\001size=54"
 "time=02:09:51.494\001sym=GOOG\001price=18.38554\001size=12"
 "time=15:40:20.955\001sym=IBM\001price=14.51357\001size=82"
@@ -29,7 +29,7 @@ q).fix.p t
 
 Unparse Ctrl+A delimited string(s) to q dictionary (table)
 ```
-q).fix.up "time=03:21:05.513s\001sym=MSFT\001price=17.60615\001size=147"
+q).qfix.up "time=03:21:05.513s\001sym=MSFT\001price=17.60615\001size=147"
 time | "03:21:05.513s"
 sym  | "MSFT"         
 price| "17.60615"     
