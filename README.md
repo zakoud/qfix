@@ -11,12 +11,20 @@ Support dictionaries, standard tables, and tables with nested cells (i.e. order 
 
 Convert table (or dictionary) to FIX format (as string)
 ```
-q).fix.p ([] time:5?.z.t;sym:5?`MSFT`GOOG`IBM;price:5?50.0;size:5?100)
-"time=15:34:36.210\001sym=GOOG\001price=28.46704\001size=73"
-"time=06:35:35.128\001sym=IBM\001price=7.809836\001size=79"
-"time=17:34:22.860\001sym=MSFT\001price=23.55095\001size=85"
-"time=14:34:20.864\001sym=GOOG\001price=39.69938\001size=19"
-"time=17:51:38.494\001sym=MSFT\001price=37.90814\001size=78"
+q)show t:([] time:5?.z.t;sym:5?`MSFT`GOOG`IBM;price:5?50.0;size:5?100)
+time         sym  price    size
+-------------------------------
+17:40:45.617 IBM  49.29141 54  
+02:09:51.494 GOOG 18.38554 12  
+15:40:20.955 IBM  14.51357 82  
+02:43:08.653 GOOG 6.153794 44  
+17:22:07.598 IBM  32.38869 87  
+q).fix.p t
+"time=17:40:45.617\001sym=IBM\001price=49.29141\001size=54"
+"time=02:09:51.494\001sym=GOOG\001price=18.38554\001size=12"
+"time=15:40:20.955\001sym=IBM\001price=14.51357\001size=82"
+"time=02:43:08.653\001sym=GOOG\001price=6.153794\001size=44"
+"time=17:22:07.598\001sym=IBM\001price=32.38869\001size=87"
 ```
 
 Unparse Ctrl+A delimited string(s) to q dictionary (table)
